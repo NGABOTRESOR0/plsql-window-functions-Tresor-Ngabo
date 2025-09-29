@@ -1,17 +1,19 @@
 # plsql-window-functions-Tresor-Ngabo
-**Name**:Ngabo Tresor
-**ID**:27209
-**Group C**
+**Name**:Ngabo Tresor.
+
+**ID**:27209.
+
+**Group C**.
 
 **PL/SQL ASSIGNMENT**
 
-**Step 1:PROBLEM IDENTIFICATION**
+# **Step 1:PROBLEM IDENTIFICATION**
 
 Business Identification:In the project I have a community library called Urumuri Library operating from all different places in need of centralised management within its decentralised physical operations.
 Problems faced: Due to its scattered operations all over the country centralising the business to properly view the operations all out the branches is a big challenge, knowing the consumer’s preferences and viewing the consumption behaviours for all the branches
 Expected Outcome: With the appropriate functions the library becomes centralised allowing the manager to manage different branches as easily as one with insight on customer’s prefered genres of books,sale’s behaviours throughout different seasons and highest demanding areas to properly supply enough book copies to the appropriate demand areas.
 
-**Step 2:Achieved goals**
+# **Step 2:Achieved goals**
 
 **Rank():** This function helped with 2 main goals from the problems I mentioned earlier being **Best perfoming book category overall** and also **Knowing specific individuals preferences and properly attending to their needs**
 **Sum():** This function facilitated the manager in properly **centralising the sales of different branches** by adding up all the lending fees for the season to come up with the Cumumlative total
@@ -19,33 +21,45 @@ Expected Outcome: With the appropriate functions the library becomes centralised
 **NTILE(4):** By analysis of the fees the books generate(lending fees) the function classifies the books in quartiles based on their profitability which serves in **proper definition of demands by the consumers**
 **AVG() OVER():** In each 3 months the **AVG()** Function calculates the average fees generated with inclusion of the losses and profits to get the overall picture without sudden ups and downs
 
-**Step 3:Database Schema**
+# **Step 3:Database Schema**
 
 My database consists 3 tables: **Members**,**Books**,**Lendings**
 
-**Table views:**
+## **Table views:**
 
-**Members**
+## **Members**.
+
 <img width="736" height="463" alt="members table" src="https://github.com/user-attachments/assets/3aeea1c0-9c0c-4ece-be08-52ed470bbf78" />
 
-This is the Members table
+### **Properties of Members**.
+
+<img width="708" height="435" alt="constrai" src="https://github.com/user-attachments/assets/b1016305-b81e-4a0c-9bad-845947c0d647" />
+
+This is the Members table and its Primary Key.
 
 
-**Books**
+## **Books**
 <img width="833" height="451" alt="books" src="https://github.com/user-attachments/assets/a96ece55-d983-4488-8755-f07a9c80bd96" />
 
-This is the Books table
+### **Properties of Books**.
+<img width="960" height="468" alt="cons" src="https://github.com/user-attachments/assets/045c4880-4411-4c29-9c2c-ccb1fe48774f" />
 
-**Lendings**
+This is the Books table and its Primary Key.
+
+## **Lendings**
 <img width="960" height="509" alt="lending" src="https://github.com/user-attachments/assets/450a8a37-3920-4027-86a3-f456a43dd932" />
-This is the Lendings table
 
-**ER diagram**
+### **Properties of Lendings**.
+<img width="960" height="464" alt="constrai" src="https://github.com/user-attachments/assets/1d874368-9467-4f87-a5ae-94c83fc3505e" />
+
+This is the Lendings table and its constraints which are Foreign Keys.
+
+## **ER diagram**
 <img width="960" height="504" alt="ERD" src="https://github.com/user-attachments/assets/28c4b4c3-5cc4-4912-92c8-e94f2c76c598" />
 
 The lendings table is in relationship with all the other tables using their attributes as its Foreign keys ie:Book id and Member id in the lendings table
 
-**Step 4:Function Implementations**.
+# **Step 4:Function Implementations**.
 
 
 **RANK():** By using partition by b.category I managed to know the best selling Book genres
@@ -70,6 +84,27 @@ The Results
 **NTILE(4):** The function displays the genres of books and the revenue they raised and assigning them classes from these attributes.
 
 The Result
-<img width="960" height="483" alt="ntil" src="https://github.com/user-attachments/assets/bc0bb39d-747f-43e9-97f6-9dac8698f5a8" />
+<img width="960" height="483" alt="ntil" src="https://github.com/user-attachments/assets/bc0bb39d-747f-43e9-97f6-9dac8698f5a8" />.
+
+# **Step 6:Results Analysis.**
+
+**What happened** was Urumuri Library has experienced good business in other places except Huye is an outlier and huge identifier of a lack of activity in Huye and could be an indicator of a need for more effort or total withdrawal and also The History of East Africa raising no revenue mimics the same behaviour as Huye calling for action.
+**The reason behind the anomaly** might be because the customers preferences and also the ranking using partition by city mainly attributing sales to the branches location and the copies might play a big role to the book's revenue generation.
+**The next step here is crucial** because one of the issues for the project was to develop a predicting habit based off data attained after the insights in the business ie:Sending more copies for the famous books and exploring the genre of those books by buying other books of the similar kind,sending coupons and other marketing tactics specifically fitting each consumer designed by their indulgence in the library
+
+# **Step 7:References.**
+
+1.**Operating pgAdmin4:** https://youtu.be/WFT5MaZN6g4.
+
+2.**w3schools.com**.
+
+3.**SimpliCode:** https://youtu.be/le9EsUaiFpQ.
+
+4.**Mode Analytics**https://mode.com/sql-tutorial/sql-window-functions/.
+
+5.**GeeksforGeeks**https://www.geeksforgeeks.org/sql/window-functions-in-sql/.
+
+6.**Gemini**.
 
 
+**“All sources were properly cited. Implementations and analysis represent original work. No AIgenerated content was copied without attribution or adaptation.”**
